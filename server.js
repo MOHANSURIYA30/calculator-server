@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const dbCon = require('./config/db_config/database')
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 const routes = require("./config/constants/routes")
 
 mongoose.connect(dbCon.mongoConf.conString, dbCon.mongoConf.options)
